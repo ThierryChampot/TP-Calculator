@@ -3,6 +3,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
+apply plugin: 'checkstyle'
 
 findbugs {
     toolVersion = "3.0.1"
@@ -18,6 +19,14 @@ findbugs {
 
 pmd {
     ignoreFailures = true
+    ruleSets = [
+        'java-basic',
+        'java-braces'
+    ]
+}
+
+checkstyle {
+    ignoreFailures = true
 }
 
 repositories {
@@ -30,5 +39,3 @@ repositories {
 dependencies {
     compile 'junit:junit:4.12'
 }
-
-

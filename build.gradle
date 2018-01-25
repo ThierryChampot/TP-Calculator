@@ -1,14 +1,29 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'findbugs'
+
+findbugs {
+    toolVersion = "3.0.1"
+    sourceSets = [sourceSets.main]
+    ignoreFailures = true
+    reportsDir = file("$project.buildDir/findbugsReports")
+    effort = "max"
+    showProgress = true
+    reportLevel = "high"
+    visitors = ["FindSqlInjection", "SwitchFallthrough"]
+    omitVisitors = ["FindNonShortCircuit"]
+}
 
 repositories {
-	mavenCentral()
-	// maven {
-	// 	url 'http://repo.maven.apache.org/maven2'
-	// }
+    mavenCentral()
+    // maven {
+    //  url 'http://repo.maven.apache.org/maven2'
+    // }
 }
 
 dependencies {
-	compile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
 }
+
+

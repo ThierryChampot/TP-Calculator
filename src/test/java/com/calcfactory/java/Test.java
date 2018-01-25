@@ -1,13 +1,10 @@
 package com.calcfactory.java;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
-
-import junit.framework.Assert;
 
 public class Test {
 

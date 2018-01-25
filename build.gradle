@@ -15,6 +15,7 @@ findbugs {
     reportLevel = "high"
     visitors = ["FindSqlInjection", "SwitchFallthrough"]
     omitVisitors = ["FindNonShortCircuit"]
+    findbugsTest.enabled = false
 }
 
 pmd {
@@ -42,6 +43,7 @@ pmd {
 }
 checkstyle {
     ignoreFailures = true
+    checkstyleTest.enabled = false
 }
 
 repositories {

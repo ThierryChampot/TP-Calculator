@@ -4,20 +4,27 @@
 package com.calcfactory.java;
 
 /**
- * The main application entry and logic.
+ * The main application entry.
  * @author Thierry
  *
  */
 public final class Application {
 
-	private Application () {}
+/**
+ * The main application logic.
+ */
+	private Application() { }
 
 	/**
 	 * Short demo of what Calculator makes.
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		Addition add = new Addition(1);
+	public static void main(final String[] args) {
+
+		/**
+		 * add makes an Addition.
+		 */
+		final Addition add = new Addition(1);
 
 		add.make(2);
 		System.out.println(add.getValue());

@@ -8,7 +8,7 @@ package com.calcfactory.java;
 public class Addition {
 
     /**
-    * value is initialised at 0;
+    * value is initialised at 0.
     */
     protected int value = 0;
 /**
@@ -23,11 +23,11 @@ public class Addition {
  * Takes the second number of the addition.
  * @param b The second number.
  */
-    public void make(final int b) {
+    public final void make(final int b) {
         this.value = this.value + b;
     }
 /**
- *	Return the value of the result.
+ * Return the value of the result.
  * @return The result of the addition.
  */
     public final int getValue() {

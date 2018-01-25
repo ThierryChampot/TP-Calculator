@@ -17,7 +17,7 @@ public final class Application {
 
     /**
      * Short demo of what Calculator makes.
-     * @param args
+     * @param args Commands passed to the calculator.
      */
     public static void main(final String[] args) {
 
